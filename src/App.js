@@ -1,6 +1,7 @@
 // import logo from "./assets/launch.png";
 // import styled from "styled-components";
 import NavBar from "./components/NavBar";
+import Homepage from "./components/Homepage";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 function App() {
@@ -10,7 +11,7 @@ function App() {
         <NavBar />
         <Switch>
           <Route exact path="/">
-            Home
+            <Homepage />
           </Route>
           <Route exact path="/about">
             About
