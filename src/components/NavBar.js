@@ -2,19 +2,20 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
+import { Bar, Links, Social, IconLink, NavbarLink } from "./Styles";
 
 const NavBar = () => {
   return (
     <Bar>
       <Links>
         <StyledLink to="/">
-          <p>Home</p>
+          <NavbarLink>Home</NavbarLink>
         </StyledLink>
         <StyledLink to="about">
-          <p>About</p>
+          <NavbarLink>About</NavbarLink>
         </StyledLink>
         <StyledLink to="projects">
-          <p>Projects</p>
+          <NavbarLink>Projects</NavbarLink>
         </StyledLink>
       </Links>
       <Social>
@@ -29,31 +30,10 @@ const NavBar = () => {
   );
 };
 
-const Bar = styled.div`
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-`;
-
-const Links = styled.div`
-  display: flex;
-  padding-left: 20px;
-  flex-direction: row;
-`;
-
-const StyledLink = styled(Link)`
+export const StyledLink = styled(Link)`
   padding-right: 15px;
   font-size: 19px;
   text-decoration: none;
-`;
-
-const Social = styled.div`
-  padding-right: 20px;
-`;
-
-const IconLink = styled.a`
-  padding-right: 15px;
 `;
 
 export default NavBar;
